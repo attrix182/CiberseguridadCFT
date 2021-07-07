@@ -22,10 +22,10 @@ Esta consiste en analizar todo lo que se pueda con la IP que se nos otorga, tant
 
 Para ello podemos ejecutar los siguientes comandos desde terminal:
 
-	```ping -s 1  00.00.00.00```
-		(** 00.00.00.00 ** es la ip de la máquina objetivo) con este comando enviamos una traza icmp, es decir transmitimos y recibimos paquetes para saber si tenemos conexión con la máquina y vemos el TTL
+```ping -s 1  00.00.00.00 ```
+(** 00.00.00.00 ** es la ip de la máquina objetivo) con este comando enviamos una traza icmp, es decir transmitimos y recibimos paquetes para saber si tenemos conexión con la máquina y vemos el TTL
 
 La salida será similar a:
-				```PING 00.00.00.00 (00.00.00.00) 56(84) bytes of data.
-				64 bytes from 00.00.00.00: icmp\_seq =1 ttl=127 time=76.3ms```
+	```PING 00.00.00.00 (00.00.00.00) 56(84) bytes of data.
+	64 bytes from 00.00.00.00: icmp\_seq =1 ttl=127 time=76.3ms```
 
