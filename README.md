@@ -1,8 +1,16 @@
 
 # Ciberseguridad
 
-<img src=""
+<img src="https://github.com/attrix182/CiberseguridadCFT/blob/main/assets/portada.gif?raw=true" heigth="350px"></img>
 
+## Introduccion 
+Mi nombre es Luciano, en este documento explicare paso a paso como comenzar a resolver maquinas de captura la bandera, las cuales consisten en acceder a una maquina solo conociendo su IP, para ello se debe utilizar distintas tecnicas de reconocimiento y explotacion de vulnerabilidades.
+Soy nuevo en este campo, pero me gusta aportar lo que voy aprendiendo para quienes tambien se interesan en aprender.
+	
+Webs que proveen laboratorios para resolver:
+	https://www.hackthebox.eu/
+	https://tryhackme.com/
+	
 
 #### Resolver máquinas CTF 
 
