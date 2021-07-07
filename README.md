@@ -32,7 +32,7 @@ Debemos pasar por varias etapas para comprometer un sistema estas son:
 
 Comencemos con:
 
-<b> 1) Etapa de reconocimiento </b>
+> <b> 1) Etapa de reconocimiento </b>
 
 Esta consiste en analizar todo lo que se pueda con la IP que se nos otorga, tanto desde el navegador como desde consola, algunos comandos a utilizar son:
 
@@ -61,3 +61,44 @@ PING 00.00.00.00 (00.00.00.00) 56(84) bytes of data.
 
 B. NMAP. Buscaremos puertos abiertos en la IP de la máquina entre otras utilidades de NMAP
 
+```
+nmap -p- --open -T5 -v -n 00.00.00.00 -oG AllPorts
+```
+Buscara en todos los puertos cuales están abiertos y exportará la salida en formato grepeable en el archivo AllPorts.
+
+```
+nmap -sS --min-rate 5000 -p- --open -vvv -n 00.00.00.00 -oG AllPorts
+```
+Lo mismo que el comando anterior pero mucho más rápido
+
+**Luego podemos usar extractPorts(Recomendado): [https://pastebin.com/tYpwpauW](https://pastebin.com/tYpwpauW) by s4vitar
+
+```
+extractPorts AllPorts
+```
+ Debemos tener agregada esta función a nivel zshrc, la salida será similar a:
+ ```
+[ *] Extracting information…
+	[*] IP : 00.00.00.00
+[*] Open ports: 22,80
+
+[*] Ports copied to clipboard
+
+```
+ 
+ 
+```
+nmap -sc -sV -p80 00.00.00.00 -oN targeted
+```
+Buscara servicios y versiones en la IP determinada y lo exporta en un archivo de texto
+
+>En este momento podremos ver para donde apuntar el ataque buscando exploits y vulnerabilidades del gestor de archivos o servicio que esté instalado en el servidor
+
+C. WFUZZ O DIRBUSTER
+```
+wfuzz -c -–hc=404 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
+```
+[http://00.00.00.00/FUZZ] // Esta utilidad basandose en un diccionario reemplazará con esos nombres de rutas comunes, por fuerza bruta, en la palabra FUZZ, y mostrará todos aquellos que retornen una respuesta distinta a 404(Not Found), para que asi podamos saber por que rutas atacar
+
+
+> <b> 2) Explotación de vulnerabilidades </b>
