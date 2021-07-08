@@ -102,3 +102,5 @@ wfuzz -c -–hc=404 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.
 
 
 > <b> 2) Explotación de vulnerabilidades </b>
+
+Aqui debemos dete
