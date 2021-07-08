@@ -41,7 +41,20 @@ Comencemos con:
 
 Esta consiste en analizar todo lo que se pueda con la IP que se nos otorga, tanto desde el navegador como desde consola, algunos comandos a utilizar son:
 
-Para ello podemos ejecutar los siguientes comandos desde terminal:
+Es muy importante que durante todo el proceso guardemos toda la informacion relevante que vayamos encontrando, desde nombre de usuario, hasta frases, o retorno de comandos que ejecutemos
+
+Este reconocimiento se puede hacer de forma visual y tambien desde terminal.
+Generalmente se suele iniciar con el visual para luego seguir investigando.
+
+> > A. Reconocimiento visual
+Consiste en ingresar desde el navegador a la IP que se nos ha proporcionado y observar de que tipo de sitio se trata, recomiendo utilizar Chrome e instalar la siguiente extension: [Wappalyzer](https://chrome.google.com/webstore/detail/wappalyzer/gppongmhjkpfnbhagpmjfkannfbllamg?hl=es) 
+esta nos retornara las librerias, frameworks y lenguajes que detecte en el sitio.
+
+
+> B.Terminal
+> Consiste en utilizar
+
+Para ello podemos ejecutar los siguientes comandos:
 
 A. PING. Ver sistema operativo y verificar conexión
 ```
