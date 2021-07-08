@@ -16,8 +16,13 @@ Webs que proveen laboratorios para resolver:
 
 ### Preparacion del entorno de trabajo
 
-1
-2
+Recomiendo utilizar una maquina virtual con alguna distribucion de linux, las mas conocidas son Parros OS y Kali Linux, estas ya vienen con las herramientas nececsarias preinstaladas
+Links:
+<ol>  
+<li> <a>https://www.virtualbox.org/</a></li> 
+<li> <a>https://www.parrotsec.org/</a></li>  
+<li> <a>https://kali.org/</a></li>  
+</ol>
 
 	
 #### Resolver máquinas CTF 
