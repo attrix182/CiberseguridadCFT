@@ -3,6 +3,8 @@
 
 <img src="https://github.com/attrix182/CiberseguridadCFT/blob/main/assets/portada.gif?raw=true" heigth="350px"></img>
 
+___ 
+
 ## Introduccion 
 Mi nombre es Luciano, en este documento explicare paso a paso como comenzar a resolver maquinas de captura la bandera, las cuales consisten en acceder a una maquina solo conociendo su IP, para ello se debe utilizar distintas tecnicas de reconocimiento y explotacion de vulnerabilidades.
 Soy nuevo en este campo, pero me gusta aportar lo que voy aprendiendo para quienes tambien se interesan en aprender.
@@ -24,6 +26,7 @@ Links:
 <li> <a>https://kali.org/</a></li>  
 </ol>
 
+___ 
 	
 #### Resolver máquinas CTF 
 
@@ -34,6 +37,8 @@ Debemos pasar por varias etapas para comprometer un sistema estas son:
 <li>Explotación de vulnerabilidades</li>  
 <li>Escalada de privilegios</li>  
 </ol>
+
+
 
 Comencemos con:
 
@@ -112,12 +117,15 @@ Buscara servicios y versiones en la IP determinada y lo exporta en un archivo de
 
 >En este momento podremos ver para donde apuntar el ataque buscando exploits y vulnerabilidades del gestor de archivos o servicio que esté instalado en el servidor
 
+
+
 C. WFUZZ O DIRBUSTER
 ```
 wfuzz -c -–hc=404 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
 ```
 [http://00.00.00.00/FUZZ] // Esta utilidad basandose en un diccionario reemplazará con esos nombres de rutas comunes, por fuerza bruta, en la palabra FUZZ, y mostrará todos aquellos que retornen una respuesta distinta a 404(Not Found), para que asi podamos saber por que rutas atacar
 
+___ 
 
 > <b> 2) Explotación de vulnerabilidades </b>
 
