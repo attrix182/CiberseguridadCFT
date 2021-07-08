@@ -31,7 +31,7 @@ ___
 	
 ### Resolver máquinas CTF 
 
-Debemos pasar por varias etapas para comprometer un sistema estas son:
+Debemos pasar por varias etapas para comprometer un sistema, estas son:
   
  <ol>  
 <li>Etapa de reconocimiento</li>  
@@ -45,10 +45,13 @@ Comencemos con:
 
 > <b> 1) Etapa de reconocimiento </b>
 
-Esta consiste en analizar todo lo que se pueda con la IP que se nos otorga, tanto desde el navegador como desde consola, algunos comandos a utilizar son:
+Esta consiste en analizar todo lo que se pueda con la IP que se nos otorga, tanto desde el navegador como desde consola.
 
-Es muy importante que durante todo el proceso guardemos toda la informacion relevante que vayamos encontrando, desde nombre de usuario, hasta frases, o retorno de comandos que ejecutemos, ya que con esta informacion podemos armar diccionarios propios o usar esos datos para probar ingresar al sistema
+Es muy importante que durante todo el proceso guardemos toda la informacion relevante que vayamos encontrando, desde nombres de usuario, hasta frases, o retorno de comandos que ejecutemos, ya que con esta informacion podemos armar diccionarios* propios o usar esos datos para probar ingresar al sistema
 
+> diccionarios*: Son archivos de texto de varias lineas, con varias palabras o conjuntos de palabras, las cuales se utilizan como datos iterar mediante fuerza bruta
+
+<br> 
 Este reconocimiento se puede hacer de forma visual y tambien desde terminal.
 Generalmente se suele iniciar con el visual para luego seguir investigando.
 
@@ -134,4 +137,20 @@ ___
 
 Aqui debemos detenernos y ver que es lo que encontramos hasta el momento para ver por donde dirigir el "ataque"
 
-Si con nmap vimos abiertos los siguiente puertos, generalmente significan lo siguiente:
+Si con nmap vimos abiertos los siguiente puertos, generalmente significan lo siguiente (no siempre puede ser asi):
+
+|Puerto|Servicio|
+|---|---|
+|  22 | ssh  | 
+| 80  | http  |  
+
+Aqui si te encuentras con un puerto con ssh abierto puedes hacer lo siguiente:
+>SSH
+
+Intenta ingresar 
+```ssh –p 22 user@00.00.00.00```
+
+Si tiene clave podemos utilizar hydra, para intentar usar combinaciones de claves por fuerza bruta, el comando sería como:
+
+```hydra -l user -P diccionario.txt 00.00.00.00 -t 4 ssh```
+
