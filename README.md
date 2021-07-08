@@ -1,5 +1,5 @@
 
-# Ciberseguridad
+# Ciberseguridad (Attrix182)
 
 <img src="https://github.com/attrix182/CiberseguridadCFT/blob/main/assets/portada.gif?raw=true" heigth="350px"></img>
 
@@ -8,6 +8,7 @@ ___
 ## Introduccion 
 Mi nombre es Luciano, en este documento explicare paso a paso como comenzar a resolver maquinas de captura la bandera, las cuales consisten en acceder a una maquina solo conociendo su IP, para ello se debe utilizar distintas tecnicas de reconocimiento y explotacion de vulnerabilidades.
 Soy nuevo en este campo, pero me gusta aportar lo que voy aprendiendo para quienes tambien se interesan en aprender.
+Nota: Actualmente lo estoy redactando en español, pero proximamente lo hare en ingles tambien
 	
 Webs que proveen laboratorios para resolver:
   
@@ -28,7 +29,7 @@ Links:
 
 ___ 
 	
-#### Resolver máquinas CTF 
+### Resolver máquinas CTF 
 
 Debemos pasar por varias etapas para comprometer un sistema estas son:
   
@@ -46,14 +47,16 @@ Comencemos con:
 
 Esta consiste en analizar todo lo que se pueda con la IP que se nos otorga, tanto desde el navegador como desde consola, algunos comandos a utilizar son:
 
-Es muy importante que durante todo el proceso guardemos toda la informacion relevante que vayamos encontrando, desde nombre de usuario, hasta frases, o retorno de comandos que ejecutemos
+Es muy importante que durante todo el proceso guardemos toda la informacion relevante que vayamos encontrando, desde nombre de usuario, hasta frases, o retorno de comandos que ejecutemos, ya que con esta informacion podemos armar diccionarios propios o usar esos datos para probar ingresar al sistema
 
 Este reconocimiento se puede hacer de forma visual y tambien desde terminal.
 Generalmente se suele iniciar con el visual para luego seguir investigando.
 
-> > A. Reconocimiento visual
-Consiste en ingresar desde el navegador a la IP que se nos ha proporcionado y observar de que tipo de sitio se trata, recomiendo utilizar Chrome e instalar la siguiente extension: [Wappalyzer](https://chrome.google.com/webstore/detail/wappalyzer/gppongmhjkpfnbhagpmjfkannfbllamg?hl=es) 
+> > A. Reconocimiento visual: <br>
+ Consiste en ingresar desde el navegador a la IP que se nos ha proporcionado y observar de que tipo de sitio se trata, recomiendo utilizar Chrome e instalar la siguiente extension: [Wappalyzer](https://chrome.google.com/webstore/detail/wappalyzer/gppongmhjkpfnbhagpmjfkannfbllamg?hl=es) 
 esta nos retornara las librerias, frameworks y lenguajes que detecte en el sitio.
+Tambien si utilizamos Chrome, con click derecho, podemos seleccionar la opcion de ver el codigo fuente, y buscar comentarios en el codigo.
+Otro lugar a buscar son las imagenes, a veces tienen de nombres palabras claves
 
 
 > B.Terminal
@@ -129,4 +132,6 @@ ___
 
 > <b> 2) Explotación de vulnerabilidades </b>
 
-Aqui debemos dete
+Aqui debemos detenernos y ver que es lo que encontramos hasta el momento para ver por donde dirigir el "ataque"
+
+Si con nmap vimos abiertos los siguiente puertos, generalmente significan lo siguiente:
